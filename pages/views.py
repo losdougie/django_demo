@@ -32,4 +32,12 @@ def index(request):
         # venv/
         # .idea/
     # create git and commit changes
-    return HttpResponse("<h1>Hello World</h1>")
+    # return HttpResponse("<h1>Hello World</h1>")
+    # changed static to render
+    return render(request, 'pages/index.html')
+# templates are set in <project> settings.py TEMPLATES > DIRS list
+# add the new route to the urls
+
+def about(request):
+    # requires render
+    return render(request, 'pages/about.html')
