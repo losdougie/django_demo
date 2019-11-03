@@ -1,0 +1,11 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<h1>To Do Items</h1>
+{% if todos %}
+{% for todo in todos %}
+<p>{{ todo.title }}</p>
+{% endfor %}
+{% else %}
+<p>No Todos Available</p>
+{% endif %}
+{% endblock %}
